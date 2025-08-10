@@ -42,7 +42,7 @@
   
   <div id="contentWrapper">
     
-    <div id="main">
+    <div id="main" class="contact-page">
       <div class="tlo">
       <h2>Kontakt</h2>
       <p class="pierwszy">
@@ -62,69 +62,6 @@
 <p class="ostatni">
 </p> 
     </div>
-    </div>
-    
-  
-    
-
-    <div id="rightSidebar">
-    <div class="tlo">
-       
-        <?php
-
-
-$autor=nl2br(htmlspecialchars($_POST['autor']));
-$tresc=htmlspecialchars($_POST['tresc']);
-$mail=nl2br(htmlspecialchars($_POST['mail']));
-$walidacja=nl2br(htmlspecialchars($_POST['walidacja']));
-
-if ($_POST['wyslij']){
-
-if (strcasecmp($walidacja, 'lutnik') != 0) {
-    print "<p class=\"ostrzezenie\">Wpisz \"lutnik\" w ostatnim polu.</p>";
-} else if (!($autor&&$tresc)){
-print "<p class=\"ostrzezenie\">Uzupełnij wszystkie pola.</p>";
-
-} else{
-
-$nadawca = "Wiadomość od: ".$autor.", ".$mail;
-
-$calymail="$nadawca"."<br /><br />"."$tresc";
-
-$naglowek="Content-Type: text/html; charset=UTF-8";
-
-if(mail('tjasiurkowski@op.pl','List ze strony', $calymail, $naglowek)){
-
-print "<p class=\"dodano\">Twoja wiadomosc została wysłana!</p>";
-
-$autor=$tresc=$mail="";
-} else {
-
-print "Błąd";
-}}}
-
-print "\t<p class=\"dodaj\">Wyślij wiadomość:</p>\n";
-print "\t<form method=\"post\"><p><textarea rows=\"10\" name=\"tresc\">$tresc";
-
-print  "</textarea></p>\n\t";
-
-print "\t<p class=\"podpis\"><input type=\"text\" name=\"autor\" value=\"$autor\" /><br />Podpis </p>\n\t<p class=\"mail\">  <input type=\"text\" name=\"mail\" value=\"$mail\" /><br /> Mail (opcjonalnie)</p>\n\t<p class=\"podpis\">  <input type=\"text\" name=\"walidacja\" value=\"$walidacja\" /><br /> Tutaj wpisz \"lutnik\"</p>\n\t<p class=\"submit\"><input type=\"hidden\" name=\"wyslij\" value=\"1\" /></p>\n\t";
-print "<p class=\"przycisk\"><input type=\"submit\" value=\"Wyślij\" /></form></p>\n";
-
-
-?>
-        
-        
-        <div id="ostatni"></div>
-    </div>
-    </div>
-    
-    <div id="licznik">
-    <img src="licznik.php" alt="licznik" />
-    </div>
-    
-    <div id="copyright">
-    Tadeusz Jasiurkowski
     </div>
   
   </div>

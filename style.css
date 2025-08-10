@@ -253,3 +253,10 @@ background-color: #FFF9CA;
   margin-top: 25px;
   border: 4px solid #8e1e0a;
 }
+
+#main.contact-page {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
