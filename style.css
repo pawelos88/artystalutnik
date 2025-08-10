@@ -1,0 +1,255 @@
+body {
+  text-align: center;
+  font-size: 62.5%;
+  background: #280701 url(images/tlo.gif) repeat-y top center;
+}
+
+#wrapper {
+  background: #fff7b1 url(images/logo.jpg) no-repeat top center;
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#banner {
+    display: none
+}
+
+
+#mainNav {
+  margin-left: 20px;
+  padding-top: 200px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+#mainNav ul{
+  float: left;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#mainNav li{
+  float: left;
+  width: 18em;
+  display: inline;
+}
+
+#mainNav a {
+  font-size: 1.5em;
+  color: #8d1d0b;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: url(images/link.gif) no-repeat center center;
+  position: relative;
+}
+
+#mainNav a:hover {
+  
+  bottom: 2px;
+}
+
+#mainNav a#zaznaczone{
+  background: url(images/linknow.gif) no-repeat center center;
+  color: #fff7b1;
+}
+* html #mainNav a{
+  height: 1px;
+}
+
+
+#contentWrapper {
+  padding-top: 20px;
+  margin-left: 0px;
+  clear: both;
+}
+
+#main {
+  float: left;
+  width: 480px;
+  margin-left: 30px;
+  background: url(images/srodektlo.jpg) repeat-y top center;
+  display: inline;
+}
+
+#main .tlo {
+  background: url(images/doltlo.jpg) no-repeat bottom center;
+  }
+  
+#main p{
+  margin: 0px 40px 0 50px;
+  text-indent: 5em;
+  font-family: Geneva, Arial, sans-serif;
+  font-size: 1.2em;
+  line-height: 140%;
+  text-align: justify;
+  padding-right: 10px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
+
+#main p#adres {
+  text-indent: 0;
+  text-align: center;
+  font-size: 1.6em;
+  padding-bottom: 5px;
+  padding-top:10px;
+}
+
+#main p.pierwszy {
+  background: url(images/podkreslenie.gif) top center no-repeat;
+}
+
+#main p.ostatni{
+  padding-bottom: 50px; 
+}
+
+#main p.ofertaspecjalna {
+  text-indent: 0;
+  text-align: center;
+  font-size: 1.3em;
+  color: red;
+  border: 1px dashed red;
+  padding-left: 2px;
+  padding-top: 0;
+  margin-top: 20px;
+}
+
+#main p.ostatni#oferta {
+  text-indent: 0;
+  line-height: 1.6em;
+}
+
+#main h2{
+  font-family: "Marker Felt", "Comic Sans MS", fantasy;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 60px;
+  text-align: center;
+  font-size: 2em;
+  color: #8d1d0b;
+  text-indent: 20px;
+  background: url(images/goratlo.jpg) no-repeat top center;
+  margin-bottom: 0;
+  padding-bottom:0;
+}
+
+#main a{
+  color: #000;
+}
+
+#main .dodano {
+  color: red;
+  text-align: center;
+  text-indent: 0;
+}
+
+#main .tresc {
+  font-family: serif;
+}
+
+#main .podpis {
+  font-style: italic;
+  border-bottom: 1px dashed;
+  padding-bottom: 10px;
+  font-size: 0.9em;
+}
+
+#main .data {
+  font-size
+}
+
+#rightSidebar {
+  margin-left: 540px;
+  width: 170px;
+  background: url(images/sidebarTlo.jpg) repeat-y top center;
+}
+
+#rightSidebar .tlo {
+  padding-top: 40px;
+  background: url(images/sidebarTop.jpg) no-repeat top center;
+}
+
+#rightSidebar img {
+  display: block;
+  padding: 5px 11px 0px 11px;
+  position: relative;
+}
+  
+#rightSidebar #ostatni {
+  background: url(images/sidebarDol.jpg) no-repeat bottom;
+  padding-bottom: 40px;
+}
+  
+#rightSidebar p{
+  width: 148px;
+  margin-left: 8px;
+  color: #FFF;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#rightSidebar .dodaj {
+  padding-top: 10px;
+  padding-left: 10px;
+  margin-left: 0;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+#rightSidebar .podpis,
+#rightSidebar .mail{
+  font-variant: small-caps;
+}
+
+#rightSidebar textarea {
+  width: 140px;
+}
+
+#rightSidebar input,
+#rightSidebar text-area {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 0.8em;
+}
+
+#rightSidebar input:focus,
+#rightSidebar textarea:focus{
+background-color: #FFF9CA;
+}
+
+#copyright {
+  margin-top: 50px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+  background: url(images/pasek.gif) no-repeat top center;
+  text-align: center;
+  font-size: 1.1em;
+  font-style: italic;
+  float: left;
+  width: 550px;
+}
+
+#licznik {
+  margin-top: 50px;
+  margin-right: 120px;
+  float: right;
+  clear: both;
+  display: inline;
+}
+
+#map {
+  width: 380px;
+  height: 380px;
+  margin-left: 46px;
+  margin-top: 25px;
+  border: 4px solid #8e1e0a;
+}

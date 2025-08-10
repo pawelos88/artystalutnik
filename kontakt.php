@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Robots" content="index, follow" />
+<meta name="Keywords" content="lutnik, artysta lutnik, lutnictwo, lubin, Tadeusz Jasiurkowski, skrzypce, altówka, wiolonczela, altówka, naprawa, budowa, sprzedaż, smyczek" />
+<meta name="Description" content="Lutnictwo - artysta lutnik Tadeusza Jasiukowskiego - budowa i renowacja instrumentów lutniczych. Skrzypce, altówki, wiolonczele. Naprawa smyczków, nabijanie włosia.
+" /> 
+<title>LUTNICTWO | Artysta Lutnik TADEUSZ JASIURKOWSKI | Skrzypce Altówka - Sprzedaż Naprawa</title>
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAP38kZGZJP9O4M4eorzkD9BTMGs_SEobFDcjFNtQTTAwUk6DGaRTAhdQelPc5M0rqsdze1izzJWM8kA" type="text/javascript"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43332166-1', 'artystalutnik.pl');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body onload="load()" onunload="GUnload()">
+
+<div id="wrapper">
+
+    <div id="banner">
+    <h1>artysta lutnik Tadeusz Jasiurkowski</h1>
+    </div>
+    
+    <div id="mainNav">
+      <ul>
+        <li><a href="index.html">O mnie</a></li>
+        <li><a href="nagrody.html">Nagrody</a></li>
+        <li><a href="oferta.html">Oferta</a></li>
+        <li><a id="zaznaczone" href="kontakt.php">Kontakt</a></li>
+      </ul>
+    </div>
+  
+  <div id="contentWrapper">
+    
+    <div id="main">
+      <div class="tlo">
+      <h2>Kontakt</h2>
+      <p class="pierwszy">
+      <p id="adres">
+      
+      Tadeusz Jasiurkowski <br />
+      ul. Leśna 13/5 <br />
+      59-300 Lubin <br />
+      tel. +48 76 8424634 <br />
+      e-mail: <a href="mailto:tjasiurkowski@op.pl">tjasiurkowski@op.pl</a> <br />
+      
+      </p>
+
+<div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.9876880249644!2d16.19964395090209!3d51.38490432737374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470f6f6d5d70c531%3A0x23024f22d8d621c7!2sArtysta%20Lutnik%20Tadeusz%20Jasiurkowski%20-%20budowa%20i%20naprawa%20skrzypiec%2C%20alt%C3%B3wek%20i%20wiolonczel!5e0!3m2!1spl!2spl!4v1628928392983!5m2!1spl!2spl" width="380" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+
+
+<p class="ostatni">
+</p> 
+    </div>
+    </div>
+    
+  
+    
+
+    <div id="rightSidebar">
+    <div class="tlo">
+       
+        <?php
+
+
+$autor=nl2br(htmlspecialchars($_POST['autor']));
+$tresc=htmlspecialchars($_POST['tresc']);
+$mail=nl2br(htmlspecialchars($_POST['mail']));
+$walidacja=nl2br(htmlspecialchars($_POST['walidacja']));
+
+if ($_POST['wyslij']){
+
+if (strcasecmp($walidacja, 'lutnik') != 0) {
+    print "<p class=\"ostrzezenie\">Wpisz \"lutnik\" w ostatnim polu.</p>";
+} else if (!($autor&&$tresc)){
+print "<p class=\"ostrzezenie\">Uzupełnij wszystkie pola.</p>";
+
+} else{
+
+$nadawca = "Wiadomość od: ".$autor.", ".$mail;
+
+$calymail="$nadawca"."<br /><br />"."$tresc";
+
+$naglowek="Content-Type: text/html; charset=UTF-8";
+
+if(mail('tjasiurkowski@op.pl','List ze strony', $calymail, $naglowek)){
+
+print "<p class=\"dodano\">Twoja wiadomosc została wysłana!</p>";
+
+$autor=$tresc=$mail="";
+} else {
+
+print "Błąd";
+}}}
+
+print "\t<p class=\"dodaj\">Wyślij wiadomość:</p>\n";
+print "\t<form method=\"post\"><p><textarea rows=\"10\" name=\"tresc\">$tresc";
+
+print  "</textarea></p>\n\t";
+
+print "\t<p class=\"podpis\"><input type=\"text\" name=\"autor\" value=\"$autor\" /><br />Podpis </p>\n\t<p class=\"mail\">  <input type=\"text\" name=\"mail\" value=\"$mail\" /><br /> Mail (opcjonalnie)</p>\n\t<p class=\"podpis\">  <input type=\"text\" name=\"walidacja\" value=\"$walidacja\" /><br /> Tutaj wpisz \"lutnik\"</p>\n\t<p class=\"submit\"><input type=\"hidden\" name=\"wyslij\" value=\"1\" /></p>\n\t";
+print "<p class=\"przycisk\"><input type=\"submit\" value=\"Wyślij\" /></form></p>\n";
+
+
+?>
+        
+        
+        <div id="ostatni"></div>
+    </div>
+    </div>
+    
+    <div id="licznik">
+    <img src="licznik.php" alt="licznik" />
+    </div>
+    
+    <div id="copyright">
+    Tadeusz Jasiurkowski
+    </div>
+  
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+
